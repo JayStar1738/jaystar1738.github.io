@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evergreen Cannabis</title>
+    <style>
+        :root {
+            --primary-color: #121212;
+            --accent-color: #4caf50;
+            --deal-shadow: rgba(173, 216, 230, 0.8);
+            --background-color: #1a1a1a;
+            --secondary-color: #2b2b2b;
+            --text-color: #f0f0f0;
+            --highlight-color: #333;
+            --deal-bg: #222;
+            --font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        header img { max-width: 200px; width: 100%; height: auto; }
+
+        .order-button {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        .order-button:hover { opacity: 0.8; }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: var(--highlight-color);
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin: 0.5rem 1rem;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover { background: var(--accent-color); color: var(--primary-color); }
+
+        .section { padding: 2rem 1rem; max-width: 1100px; margin: 1.5rem auto; border-radius: 12px; }
+
+        /* Deals Section */
+        #deals { background: var(--deal-bg); box-shadow: 0 4px 12px var(--deal-shadow); }
+        #deals h2 { color: var(--accent-color); text-align: center; margin-top: 0; }
+        .deals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .deal-category { background: var(--secondary-color); padding: 1rem; border-radius: 8px; }
+        .deal-category h3 { margin-bottom: 0.5rem; color: var(--accent-color); }
+        .deal-category ul { list-style: none; padding: 0; }
+        .deal-category li { margin: 0.3rem 0; font-weight: bold; }
+
+        /* Popular Product Categories with Dropdowns */
+        #categories { background: var(--secondary-color); }
+        #categories h2 { color: var(--accent-color); text-align: center; margin-top: 0; }
+        details { background: var(--highlight-color); padding: 1rem; margin: 1rem 0; border-radius: 8px; }
+        summary {
+            list-style: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+        details[open] summary { color: var(--accent-color); }
+        .dropdown-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .item { background: var(--deal-bg); padding: 0.5rem; border-radius: 6px; text-align: center; }
+        .item img { width: 100%; height: auto; border-radius: 4px; }
+        .item p { margin: 0.5rem 0 0; font-size: 0.9rem; }
+
+        /* Top Sellers */
+        #top-sellers { background: var(--secondary-color); }
+        #top-sellers h2 { color: var(--accent-color); text-align: center; margin-top: 0; }
+        .sellers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+        .seller-card { background: var(--highlight-color); padding: 1rem; border-radius: 8px; text-align: center; }
+
+        footer { background: var(--primary-color); color: var(--text-color); text-align: center; padding: 1rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="header-logo.png" alt="Evergreen Dispensary Logo">
+        <a href="https://dutchie.com/stores/potters-cannabis-boutique-rec" target="_blank" class="order-button">Order Now</a>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#deals">Deals</a>
+        <a href="#categories">Popular Product Categories</a>
+        <a href="#top-sellers">Top Sellers</a>
+        <a href="about.html">About</a>
+        <a href="farm.html">Our Roots</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact & Social</a>
+        <a href="https://dutchie.com/stores/potters-cannabis-boutique-rec" target="_blank">Shop</a>
+    </nav>
+
+    <!-- Deals Section -->
+    <section class="section" id="deals">
+        <h2>DEALS (5/1 - 5/6)</h2>
+        <div class="deals-grid">
+            <!-- Flower Deals -->
+            <div class="deal-category">
+                <h3>🌿 Flower Deals</h3>
+                <ul>
+                    <li>💨 $15 Paisley Ounce (No Stack)</li>
+                    <li>💨 2 for $35 Highgrade 1/8ths</li>
+                    <li>🔖 10% Off Pre-packed 1/8ths</li>
+                    <li>🔖 10% Off Pre-packed Ounces</li>
+                    <li>🔖 10% Off Evergreen Flower</li>
+                </ul>
+            </div>
+            <!-- Pre-rolls -->
+            <div class="deal-category">
+                <h3>🌿 Pre-rolls</h3>
+                <ul>
+                    <li>🔥 10 for $10 Ardvark / Paisley 1g</li>
+                    <li>🔥 4 for $20 Cali Blaze Infused 1g</li>
+                </ul>
+            </div>
+            <!-- Concentrates -->
+            <div class="deal-category">
+                <h3>🛢️ Concentrates</h3>
+                <ul>
+                    <li>🧪 2 for $20 Highgrade 1g</li>
+                </ul>
+            </div>
+            <!-- Carts -->
+            <div class="deal-category">
+                <h3>🛒 Carts</h3>
+                <ul>
+                    <li>🚗 5 for $40 MKT Carts 1g</li>
+                    <li>💨 3 for $65 Linx by MKX 1g</li>
+                </ul>
+            </div>
+            <!-- Edibles -->
+            <div class="deal-category">
+                <h3>🍬 Edibles / Misc.</h3>
+                <ul>
+                    <li>🍭 5 for $10 Cali Blaze Gems 200mg</li>
+                    <li>🧤 15% Off High TeHC products</li>
+                    <li>💨 3 for $15 Hey Captain 100 mg</li>
+                    <li>💨 3 for $21 Full Moons 200 mg</li>
+                </ul>
+            </div>
+            <!-- Daily Deals -->
+            <div class="deal-category">
+                <h3>DAILY DEALS</h3>
+                <ul>
+                    <li>🌿 $15 Half Oz</li>
+                    <li>🌿 $20 Oz</li>
+                    <li>🌿 $30 Oz (all bud oz, outdoor & indoor)</li>
+                    <li>🌿 $3.50 Grams</li>
+                    <li>💨 $2 Pre-Rolls</li>
+                    <li>🍬 $3 200mg Edibles</li>
+                    <li>🛢️ $8 Carts & Concentrates</li>
+                </ul>
+            </div>
+            <!-- Special Discounts -->
+            <div class="deal-category">
+                <h3>Special Discounts</h3>
+                <ul>
+                    <li>🎖️ 10% OFF for Veterans</li>
+                    <li>👵 10% OFF for Seniors</li>
+                    <li>🎉 First-Time Patient Special: 10% OFF + FREE Pre-Roll! 🎁</li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align:center; color: var(--accent-color);">🌟 Swing by EverGreen and catch these 🔥 deals before they’re gone! 🌟</p>
+    </section>
+
+    <!-- Popular Product Categories -->
+    <section class="section" id="categories">
+        <h2>Popular Product Categories</h2>
+        <details>
+            <summary>Flower</summary>
+            <div class="dropdown-content">
+                <div class="item"><img src="flower1.jpg" alt="Strain A"><p>Strain A: 22% THC, Hybrid</p></div>
+                <div class="item"><img src="flower2.jpg" alt="Strain B"><p>Strain B: 18% THC, Indica</p></div>
+                <div class="item"><img src="flower3.jpg" alt="Strain C"><p>Strain C: 25% THC, Sativa</p></div>
+            </div>
+        </details>
+        <details>
+            <summary>Pre-rolls</summary>
+            <div class="dropdown-content">
+                <div class="item"><img src="preroll1.jpg" alt="Pre-roll A"><p>Pre-roll A: 20% THC, Hybrid</p></div>
+                <div class="item"><img src="preroll2.jpg" alt="Pre-roll B"><p>Pre-roll B: 15% THC, Sativa</p></div>
+                <div class="item"><img src="preroll3.jpg" alt="Pre-roll C"><p>Pre-roll C: 22% THC, Indica</p></div>
+            </div>
+        </details>
+        <details>
+            <summary>Edibles</summary>
+            <div class="dropdown-content">
+                <div class="item"><img src="edible1.jpg" alt="Edible A"><p>Edible A: 10mg THC, Hybrid</p></div>
+                <div class="item"><img src="edible2.jpg" alt="Edible B"><p>Edible B: 20mg THC, Sativa</p></div>
+                <div class="item"><img src="edible3.jpg" alt="Edible C"><p>Edible C: 30mg THC, Indica</p></div>
+            </div>
+        </details>
+        <details>
+            <summary>Vapes & Carts</summary>
+            <div class="dropdown-content">
+                <div class="item"><img src="vape1.jpg" alt="Vape A"><p>Vape A: 90% THC, Sativa</p></div>
+                <div class="item"><img src="vape2.jpg" alt="Vape B"><p>Vape B: 85% THC, Indica</p></div>
+                <div class="item"><img src="vape3.jpg" alt="Vape C"><p>Vape C: 88% THC, Hybrid</p></div>
+            </div>
+        </details>
+        <details>
+            <summary>Concentrates</summary>
+            <div class="dropdown-content">
+                <div class="item"><img src="concentrate1.jpg" alt="Concentrate A"><p>Concentrate A: 75% THC, Hybrid</p></div>
+                <div class="item"><img src="concentrate2.jpg" alt="Concentrate B"><p>Concentrate B: 80% THC, Sativa</p></div>
+                <div class="item"><img src="concentrate3.jpg" alt="Concentrate C"><p>Concentrate C: 70% THC, Indica</p></div>
+            </div>
+        </details>
+    </section>
+
+    <!-- Top Sellers Section -->
+    <section class="section" id="top-sellers">
+        <h2>Top Sellers This Week</h2>
+        <div class="sellers-grid">
+            <div class="seller-card"><p>Top Strain A</p></div>
+            <div class="seller-card"><p>Top Strain B</p></div>
+            <div class="seller-card"><p>Top Edible</p></div>
+            <div class="seller-card"><p>Top Vape</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Evergreen Cannabis. All rights reserved.</p>
+        <p>123 Evergreen Rd, Battle Creek, MI</p>
+        <p>Follow us on [Instagram] [Facebook]</p>
+    </footer>
+</body>
+</html>
