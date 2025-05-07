@@ -16,14 +16,12 @@
             --deal-bg: #222;
             --font-family: 'Helvetica Neue', sans-serif;
         }
-
         body {
             margin: 0;
             font-family: var(--font-family);
             background: var(--background-color);
             color: var(--text-color);
         }
-
         header {
             background: var(--primary-color);
             display: flex;
@@ -31,9 +29,7 @@
             justify-content: space-between;
             padding: 1rem;
         }
-
         header img { max-width: 200px; width: 100%; height: auto; }
-
         .order-button {
             background: var(--accent-color);
             color: var(--primary-color);
@@ -44,14 +40,12 @@
             transition: opacity 0.3s;
         }
         .order-button:hover { opacity: 0.8; }
-
         nav {
             display: flex;
             justify-content: center;
             background: var(--highlight-color);
             flex-wrap: wrap;
         }
-
         nav a {
             text-decoration: none;
             color: var(--text-color);
@@ -59,11 +53,8 @@
             padding: 0.5rem 1rem;
             transition: background 0.3s;
         }
-
         nav a:hover { background: var(--accent-color); color: var(--primary-color); }
-
         .section { padding: 2rem 1rem; max-width: 1100px; margin: 1.5rem auto; border-radius: 12px; }
-
         /* Deals Section */
         #deals { background: var(--deal-bg); box-shadow: 0 4px 12px var(--deal-shadow); }
         #deals h2 { color: var(--accent-color); text-align: center; margin-top: 0; }
@@ -72,30 +63,27 @@
         .deal-category h3 { margin-bottom: 0.5rem; color: var(--accent-color); }
         .deal-category ul { list-style: none; padding: 0; }
         .deal-category li { margin: 0.3rem 0; font-weight: bold; }
-
-        /* Popular Product Categories with Dropdowns */
+        /* Categories */
         #categories { background: var(--secondary-color); }
         #categories h2 { color: var(--accent-color); text-align: center; margin-top: 0; }
         details { background: var(--highlight-color); padding: 1rem; margin: 1rem 0; border-radius: 8px; }
-        summary {
-            list-style: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            outline: none;
-        }
+        summary { list-style: none; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
         details[open] summary { color: var(--accent-color); }
         .dropdown-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem; }
         .item { background: var(--deal-bg); padding: 0.5rem; border-radius: 6px; text-align: center; }
         .item img { width: 100%; height: auto; border-radius: 4px; }
         .item p { margin: 0.5rem 0 0; font-size: 0.9rem; }
-
         /* Top Sellers */
         #top-sellers { background: var(--secondary-color); }
         #top-sellers h2 { color: var(--accent-color); text-align: center; margin-top: 0; }
         .sellers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
         .seller-card { background: var(--highlight-color); padding: 1rem; border-radius: 8px; text-align: center; }
-
+        /* Events */
+        #events { background: var(--secondary-color); }
+        #events h2 { color: var(--accent-color); text-align: center; margin-top: 0; }
+        .event-content { background: var(--highlight-color); padding: 1.5rem; border-radius: 8px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+        .event-content ul { list-style: none; padding: 0; margin: 0.5rem 0; }
+        .event-content li { margin: 0.3rem 0; font-weight: bold; }
         footer { background: var(--primary-color); color: var(--text-color); text-align: center; padding: 1rem; margin-top: 2rem; }
     </style>
 </head>
@@ -104,7 +92,6 @@
         <img src="header-logo.png" alt="Evergreen Dispensary Logo">
         <a href="https://dutchie.com/stores/potters-cannabis-boutique-rec" target="_blank" class="order-button">Order Now</a>
     </header>
-
     <nav>
         <a href="#home">Home</a>
         <a href="#deals">Deals</a>
@@ -114,14 +101,13 @@
         <a href="farm.html">Our Roots</a>
         <a href="reviews.html">Reviews</a>
         <a href="contact.html">Contact & Social</a>
+        <a href="#events">Events</a>
         <a href="https://dutchie.com/stores/potters-cannabis-boutique-rec" target="_blank">Shop</a>
     </nav>
-
     <!-- Deals Section -->
     <section class="section" id="deals">
         <h2>DEALS (5/1 - 5/6)</h2>
         <div class="deals-grid">
-            <!-- Flower Deals -->
             <div class="deal-category">
                 <h3>🌿 Flower Deals</h3>
                 <ul>
@@ -132,7 +118,6 @@
                     <li>🔖 10% Off Evergreen Flower</li>
                 </ul>
             </div>
-            <!-- Pre-rolls -->
             <div class="deal-category">
                 <h3>🌿 Pre-rolls</h3>
                 <ul>
@@ -140,14 +125,12 @@
                     <li>🔥 4 for $20 Cali Blaze Infused 1g</li>
                 </ul>
             </div>
-            <!-- Concentrates -->
             <div class="deal-category">
                 <h3>🛢️ Concentrates</h3>
                 <ul>
                     <li>🧪 2 for $20 Highgrade 1g</li>
                 </ul>
             </div>
-            <!-- Carts -->
             <div class="deal-category">
                 <h3>🛒 Carts</h3>
                 <ul>
@@ -155,7 +138,6 @@
                     <li>💨 3 for $65 Linx by MKX 1g</li>
                 </ul>
             </div>
-            <!-- Edibles -->
             <div class="deal-category">
                 <h3>🍬 Edibles / Misc.</h3>
                 <ul>
@@ -165,7 +147,6 @@
                     <li>💨 3 for $21 Full Moons 200 mg</li>
                 </ul>
             </div>
-            <!-- Daily Deals -->
             <div class="deal-category">
                 <h3>DAILY DEALS</h3>
                 <ul>
@@ -178,7 +159,6 @@
                     <li>🛢️ $8 Carts & Concentrates</li>
                 </ul>
             </div>
-            <!-- Special Discounts -->
             <div class="deal-category">
                 <h3>Special Discounts</h3>
                 <ul>
@@ -188,9 +168,8 @@
                 </ul>
             </div>
         </div>
-        <p style="text-align:center; color: var(--accent-color);">🌟 Swing by EverGreen and catch these 🔥 deals before they’re gone! 🌟</p>
+        <p style="text-align:center; color: var(--accent-color);">🌟 Swing by Evergreen and catch these 🔥 deals before they’re gone! 🌟</p>
     </section>
-
     <!-- Popular Product Categories -->
     <section class="section" id="categories">
         <h2>Popular Product Categories</h2>
@@ -235,8 +214,7 @@
             </div>
         </details>
     </section>
-
-    <!-- Top Sellers Section -->
+    <!-- Top Sellers -->
     <section class="section" id="top-sellers">
         <h2>Top Sellers This Week</h2>
         <div class="sellers-grid">
@@ -246,7 +224,24 @@
             <div class="seller-card"><p>Top Vape</p></div>
         </div>
     </section>
-
+    <!-- Events -->
+    <section class="section" id="events">
+        <h2>🎉 Upcoming Event</h2>
+        <div class="event-content">
+            <p>🎯 <strong>Cannabis Cornhole Tournament</strong></p>
+            <p>Join us on <strong>May 23, 2025</strong> for a day of good vibes, great competition, and even better prizes!</p>
+            <ul>
+                <li>🎶 Live DJ</li>
+                <li>🚚 Food trucks</li>
+                <li>🌿 21+ only event</li>
+                <li>👊 All skill levels welcome</li>
+                <li>💵 $10 per person to enter</li>
+                <li>🏆 Prizes for 1st, 2nd, and 3rd place winners!</li>
+            </ul>
+            <p>Bring your best game (and your appetite) and let's see who will be crowned the cornhole champs!</p>
+            <p><em>Pre-registration encouraged, walk-ups welcome if space allows.</em></p>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2025 Evergreen Cannabis. All rights reserved.</p>
         <p>123 Evergreen Rd, Battle Creek, MI</p>
