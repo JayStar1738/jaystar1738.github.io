@@ -54,7 +54,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: #4caf50;
   margin: 0.5rem 1rem;
   padding: 0.5rem 1rem;
   transition: background 0.3s;
@@ -62,7 +62,7 @@ nav a {
 
 nav a:hover {
   background: var(--accent-color);
-  color: var(--primary-color);
+  color: #81c784;
 }
 
 .section {
