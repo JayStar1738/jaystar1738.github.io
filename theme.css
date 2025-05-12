@@ -226,3 +226,12 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+.boxed-section {
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0,255,0,0.2); /* Greenish glow like your deals section */
+}
+
