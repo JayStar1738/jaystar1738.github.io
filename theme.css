@@ -1,7 +1,6 @@
 :root {
   --primary-color: #121212;
   --accent-color: #4caf50;
-  --deal-shadow: rgba(173, 216, 230, 0.8);
   --background-color: #1a1a1a;
   --secondary-color: #2b2b2b;
   --text-color: #f0f0f0;
@@ -74,7 +73,6 @@ nav a:hover {
 
 #deals {
   background: var(--deal-bg);
-  box-shadow: 0 4px 12px var(--deal-shadow);
 }
 
 #deals h2 {
@@ -449,6 +447,16 @@ footer {
 
 .fade-in-left {
   animation-name: fadeInLeft;
+}
+
+/* unify every “card” with the same white glow */
+.deal-category,
+.review-card,
+.seller-card,
+.grid-item,
+.contact-card {
+  /* soft white glow */
+  box-shadow: 0 6px 20px rgba(255,255,255,0.1);
 }
 
 
