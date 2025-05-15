@@ -190,7 +190,11 @@ details[open] summary {
 
 /* Events */
 #events {
-  background: var(--secondary-color);
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
 }
 
 #events h2 {
