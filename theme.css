@@ -321,3 +321,44 @@ footer {
   font-weight: 600;
   color: #2e7d32;
 }
+
+.review-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.review-card {
+  background: white;
+  color: #222;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1); /* Soft white glow */
+  max-width: 900px;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+}
+
+.review-text {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #ffc107;
+  margin-bottom: 0.3rem;
+}
+
+.review-author {
+  text-align: right;
+  font-weight: bold;
+  color: #666;
+}
+
