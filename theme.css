@@ -475,30 +475,93 @@ footer {
 .hero-video {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
 .hero-video video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
 .hero-video .hero-overlay {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding-top: 20vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
+  text-align: center;
+  padding: 1rem;
+  max-width: 90%;
+}
+
+.hero-video .hero-overlay h1 {
+  font-size: 3vw;
+  margin-bottom: 0.5rem;
+}
+
+.hero-video .hero-overlay p {
+  font-size: 1.5vw;
+  margin-bottom: 1rem;
 }
 
 .hero-video .cta-button {
-  margin-top: 1rem;
-  display: inline-block;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-video {
+    height: 50vh;
+  }
+
+  .hero-video .hero-overlay h1 {
+    font-size: 6vw;
+  }
+
+  .hero-video .hero-overlay p {
+    font-size: 3.5vw;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.25rem 0;
+    padding: 0.75rem;
+  }
+
+  .grid-container,
+  .deals-grid,
+  .dropdown-content,
+  .sellers-grid,
+  .review-grid,
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cta-button {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .hero-overlay {
+    padding-top: 15vh !important;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
