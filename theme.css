@@ -606,3 +606,46 @@ footer {
   font-size: 16px;
 }
 
+.image-gallery {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.image-gallery h2.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2e7d32; /* Evergreen green */
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-card {
+  max-width: 300px;
+  flex: 1 1 280px;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-card p.caption {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #2e7d32;
+  font-size: 1rem;
+}
+
+
