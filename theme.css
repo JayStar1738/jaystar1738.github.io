@@ -657,4 +657,40 @@ footer {
   font-size: 1rem;
 }
 
+/* === Discover Evergreen: uniform cards, no white gap === */
+
+/* Make the row a clean, responsive grid */
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* Card container */
+.image-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;             /* trims overflow, keeps corners clean */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image: fill card, no inline whitespace, consistent visual height */
+.image-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;          /* change to 16/9 if you prefer wider */
+  object-fit: cover;
+  display: block;               /* removes the white “baseline” strip */
+}
+
+/* Caption: consistent spacing/height so card heights match */
+.image-card .caption {
+  color: #fff;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  min-height: 3.2em;            /* evens out 1–2 line captions */
+}
+
 
