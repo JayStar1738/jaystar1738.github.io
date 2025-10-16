@@ -693,4 +693,58 @@ footer {
   min-height: 3.2em;            /* evens out 1–2 line captions */
 }
 
+/* === Discover Evergreen (aligned with other sections) === */
+.image-gallery {
+  max-width: 1100px;               /* same width as .section */
+  margin: 2rem auto;               /* same vertical spacing */
+  padding: 2rem 1rem;
+  background: var(--secondary-color);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.image-gallery h2.section-title {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.image-card {
+  background: var(--highlight-color);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(255,255,255,0.08);
+}
+
+.image-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.image-card .caption {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  min-height: 3.2em;
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+  .image-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 
